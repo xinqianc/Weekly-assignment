@@ -30,11 +30,13 @@ VLSPADKTNIKSTWDKIGGHAGDYGGEALDRTFQSFPTTKTYFPHFDLSPGSAQVKAHGKKVADALTTAVAHLDDLPGAL
 VLSPADKTNIKSTWDKIGGHAGDYGGEALDRTFQSFPTTKTYFPHFDLSPGSAQVKAHGKKVADALTTAVAHLDDLPGALSALSDLHAYKLRVDPVNFKLLSHCLLVTLACHHPTEFTPAVHASLDKFFAAVSTVLTSKYR
  
 # Problem:
- I don't know how to use sort in this fasta file (I want to put those sequences in alphabetical order and remain its name above, however, I don't know how to use sort to sort two lines together [since fasta file has two lines for each sequence])
+ I want to put those sequences in alphabetical order and remain its name above as well, however, I don't know how to use sort to sort two lines together [since fasta file has two lines for each sequence and using sort only gets a mess])
  
  
  
-# 2. grep kangaroo WA1.fasta | tail -2
+# 2. grep kangaroo WA1.fasta | sort
+
+purpose : only want to see what sequences are from kangaroos and sort them in alphabetical order to help us extract information quickly
 
 grep kangaroo WA1.fasta : this will find the lines contain the word of "kangaroo"
 
@@ -44,16 +46,16 @@ the output should be
 >beta_globin_kangaroo P02106 Macropus giganteus (eastern gray kangaroo)
 
 
-| tail -2 : search the last two lines containing "kangaroo"
+| sort : put protein names in alphabetical order
 
 the output should be 
 >alpha_globin_kangaroo P01975 Macropus giganteus (eastern gray kangaroo)
 >beta_globin_kangaroo P02106 Macropus giganteus (eastern gray kangaroo)
-
+>myoglobin_kangaroo P02194 Macropus rufus (red kangaroo)
 
 # 3. grep dog WA1.fasta | wc
 
-grep dog WA1.fasta : this will find the lines contain the word of "dog"
+grep dog WA1.fasta : want to see how many sequences are from dogs
 
 the output should be 
 >alpha_globin_dog P60529 Canis lupus familiaris (dog)
