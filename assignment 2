@@ -3,6 +3,7 @@ Part 1
 efetch -db=nucleotide -id=NC_008535.1 -format=gb>Coffea_arabica_chloroplast.gbk
 wget https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/scripts/genbank_to_fasta.py
 python genbank_to_fasta.py Coffea_arabica_chloroplast.gbk Coffea_arabica_chloroplast.gbk.fasta
+(we use python to convert gbk file to fasta file)
 
 Part 2
 (1)Determine the number of protein sequences in the chloroplast
