@@ -1,0 +1,15 @@
+*: everything
+cp: copy
+cp *.fasta Documents
+
+
+wget: get something from the website
+tar.gz: tar: comebine mulitple files, tar: ziped the file.
+wget https://github.com/stechtmann/BL4300-5300/raw/master/data/In_class/lots_o_genbank_files.tar.gz
+to untar the files:  tar xvzf lots_o_genbank_files.tar.gz
+
+CODE:
+wget https://github.com/stechtmann/BL4300-5300/raw/master/data/In_class/lots_o_genbank_files.tar.gz
+tar xvzf lots_o_genbank_files.tar.gz
+
+
