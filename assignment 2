@@ -1,0 +1,34 @@
+Part 1
+
+efetch -db=nucleotide -id=NC_008535.1 -format=gb>Coffea_arabica_chloroplast.gbk
+wget https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/scripts/genbank_to_fasta.py
+python genbank_to_fasta.py Coffea_arabica_chloroplast.gbk Coffea_arabica_chloroplast.gbk.fasta
+
+Part 2
+Determine the number of protein sequences in the chloroplast
+grep ">" Coffea_arabica_chloroplast.gbk.fasta | wc -l
+OUTPUT:85
+
+Create a file of all of the names of protein sequences in Coffee plant's chloroplast sequences.\
+grep ">" Coffea_arabica_chloroplast_name.txt
+
+How many photosystem subunits are present in the chromosome?
+sort Coffea_arabica_chloroplast_name.txt | uniq | grep "photosystem" Coffea_arabica_chloroplast_name.txt | wc -l
+OUTPUT:22
+
+Make a .fasta file with the sequences for ATP synthase CF1 beta subunit protein sequence
+sort Coffea_arabica_chloroplast_name.txt | uniq | grep "ATP synthase CF1 beta" Coffea_arabica_chloroplast_name.txt > CCoffea_arabica_chloroplast_ATP_synthase CF1_beta.fasta
+
+
+
+
+
+
+
+
+Note: 
+wc -l : Prints the number of lines in a file.
+wc -w : prints the number of words in a file.
+wc -c : Displays the count of bytes in a file.
+wc -m : prints the count of characters from a file.
+wc -L : prints only the length of the longest line in a file.
