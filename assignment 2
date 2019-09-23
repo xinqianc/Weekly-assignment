@@ -5,22 +5,29 @@ wget https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/scripts/gen
 python genbank_to_fasta.py Coffea_arabica_chloroplast.gbk Coffea_arabica_chloroplast.gbk.fasta
 
 Part 2
-Determine the number of protein sequences in the chloroplast
+(1)Determine the number of protein sequences in the chloroplast
 grep ">" Coffea_arabica_chloroplast.gbk.fasta | wc -l
 OUTPUT:85
 
-Create a file of all of the names of protein sequences in Coffee plant's chloroplast sequences.\
-grep ">" Coffea_arabica_chloroplast_name.txt
+Annotation: use grep ">" to gather names of protein sequences together and use wc -l to count the lines of them.(Since each line is a name of a protein sequence)
 
-How many photosystem subunits are present in the chromosome?
+(2)Create a file of all of the names of protein sequences in Coffee plant's chloroplast sequences.\
+grep ">" Coffea_arabica_chloroplast.gbk.fasta > Coffea_arabica_chloroplast_name.txt
+
+Annotation: use grep ">" to gather names of protein sequences together and use > to input the information from grep to a file named Coffea_arabica_chloroplast_name.txt
+
+(3)How many photosystem subunits are present in the chromosome?
 sort Coffea_arabica_chloroplast_name.txt | uniq | grep "photosystem" Coffea_arabica_chloroplast_name.txt | wc -l
 OUTPUT:22
 
-Make a .fasta file with the sequences for ATP synthase CF1 beta subunit protein sequence
+Annotation:use sort and uniq to put those names in order and display all but one of repeated lines, and then use grep to find lines that contain "photosystem", and finally use wc to count how many words of photosystem are repeated in lines.
+
+
+(4)Make a .fasta file with the sequences for ATP synthase CF1 beta subunit protein sequence
 sort Coffea_arabica_chloroplast_name.txt | uniq | grep "ATP synthase CF1 beta" Coffea_arabica_chloroplast_name.txt > CCoffea_arabica_chloroplast_ATP_synthase CF1_beta.fasta
 
 
-
+Annotation: the usages of sort, uniq, grep and > are described above.
 
 
 
