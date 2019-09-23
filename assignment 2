@@ -27,10 +27,10 @@ Annotation:use sort and uniq to put those names in order and display all but one
 sort Coffea_arabica_chloroplast_name.txt | uniq | grep "ATP synthase CF1 beta" Coffea_arabica_chloroplast_name.txt > CCoffea_arabica_chloroplast_ATP_synthase CF1_beta.fasta
 
 
-Annotation: the usages of sort, uniq, grep and > are described above.
+Annotation: the usage of "sort", "uniq", "grep" and ">" are described above.
 
 
-
+https://github.com/xinqianc/Weekly-assignment/edit/master/assignment%202
 
 
 Note: 
