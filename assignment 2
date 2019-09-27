@@ -8,6 +8,7 @@ python genbank_to_fasta.py Coffea_arabica_chloroplast.gbk Coffea_arabica_chlorop
 Part 2
 (1)Determine the number of protein sequences in the chloroplast
 grep ">" Coffea_arabica_chloroplast.gbk.fasta | wc -l
+grep -c ">"  Coffea_arabica_chloroplast.gbk.fasta
 OUTPUT:85
 
 Annotation: use grep ">" to gather names of protein sequences together and use wc -l to count the lines of them.(Since each line is a name of a protein sequence)
@@ -25,10 +26,10 @@ Annotation:use sort and uniq to put those names in order and display all but one
 
 
 (4)Make a .fasta file with the sequences for ATP synthase CF1 beta subunit protein sequence
-sort Coffea_arabica_chloroplast_name.txt | uniq | grep "ATP synthase CF1 beta" Coffea_arabica_chloroplast_name.txt > CCoffea_arabica_chloroplast_ATP_synthase CF1_beta.fasta
+sort Coffea_arabica_chloroplast_name.txt | uniq | grep -A1 "ATP synthase CF1 beta" Coffea_arabica_chloroplast_name.txt > CCoffea_arabica_chloroplast_ATP_synthase CF1_beta.fasta
 
 
-Annotation: the usage of "sort", "uniq", "grep" and ">" are described above.
+Annotation: the usage of "sort", "uniq", "grep" and ">" are described above.(-A1: the line and next line after)
 
 
 https://github.com/xinqianc/Weekly-assignment/edit/master/assignment%202
