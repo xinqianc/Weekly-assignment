@@ -1,90 +1,10 @@
-##(base) [xinqianc@colossus in_class_assignments]$ mkdir week_4_assignment
-##(base) [xinqianc@colossus in_class_assignments]$ cd week_4_assignment/
+(base) [xinqianc@colossus in_class_assignments]$ mkdir week_4_assignment
+(base) [xinqianc@colossus in_class_assignments]$ cd week_4_assignment/
 (base) [xinqianc@colossus week_4_assignment]$ ls
 (base) [xinqianc@colossus week_4_assignment]$ conda install entrez-direct
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
-
-# All requested packages already installed.
-
 (base) [xinqianc@colossus week_4_assignment]$ efetch -db=nucleotide -id=CP000141.1 -format=fasta>Carboxydothermus_hydrogenoformans.fasta
-(base) [xinqianc@colossus week_4_assignment]$ ls
-Carboxydothermus_hydrogenoformans.fasta
 (base) [xinqianc@colossus week_4_assignment]$ gdown.pl https://drive.google.com/file/d/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS/edit C.hydro_6008_R1.fastq
-Cannot open cookies file ‘gdown.cookie.temp’: No such file or directory
---2019-10-08 09:43:28--  https://docs.google.com/uc?id=1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS&export=download
-Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
-Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [text/html]
-Saving to: ‘C.hydro_6008_R1.fastq’
-
-     0K                                     20.2M=0s
-
-2019-10-08 09:43:28 (20.2 MB/s) - ‘C.hydro_6008_R1.fastq’ saved [3260]
-
---2019-10-08 09:43:28--  https://docs.google.com/uc?export=download&confirm=K7B5&id=1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS
-Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
-Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
-HTTP request sent, awaiting response... 302 Moved Temporarily
-Location: https://doc-0k-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/gj531por8be9l449m38t1chbi5h5vb8t/1570536000000/00987064705613225626/*/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS?e=download [following]
-Warning: wildcards not supported in HTTP.
---2019-10-08 09:43:29--  https://doc-0k-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/gj531por8be9l449m38t1chbi5h5vb8t/1570536000000/00987064705613225626/*/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS?e=download
-Resolving doc-0k-40-docs.googleusercontent.com (doc-0k-40-docs.googleusercontent.com)... 172.217.6.1, 2607:f8b0:4009:811::2001
-Connecting to doc-0k-40-docs.googleusercontent.com (doc-0k-40-docs.googleusercontent.com)|172.217.6.1|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [application/octet-stream]
-Saving to: ‘C.hydro_6008_R1.fastq’
-
-     0K ........ ........ ........ ........ 15.7M
- 32768K ........ ........ ........ ........ 15.7M
- 65536K ........ ........ ........ ........ 15.8M
- 98304K ........ ........ ........ ........ 16.0M
-131072K ........ ........ ........ ........ 13.8M
-163840K ........ ........ ........ ........ 15.6M
-196608K ........ ........ .......           15.6M=14s
-
-2019-10-08 09:43:43 (15.4 MB/s) - ‘C.hydro_6008_R1.fastq’ saved [225555584]
-
 (base) [xinqianc@colossus week_4_assignment]$ gdown.pl https://drive.google.com/file/d/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK/edit C.hydro_6008_R2.fastq
-Cannot open cookies file ‘gdown.cookie.temp’: No such file or directory
---2019-10-08 09:43:52--  https://docs.google.com/uc?id=1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK&export=download
-Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
-Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [text/html]
-Saving to: ‘C.hydro_6008_R2.fastq’
-
-     0K                                     19.8M=0s
-
-2019-10-08 09:43:52 (19.8 MB/s) - ‘C.hydro_6008_R2.fastq’ saved [3260]
-
---2019-10-08 09:43:52--  https://docs.google.com/uc?export=download&confirm=8O_U&id=1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK
-Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
-Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
-HTTP request sent, awaiting response... 302 Moved Temporarily
-Location: https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/f2tvf2j9cglutjhrdsg71a1u1tdu2qno/1570536000000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download [following]
-Warning: wildcards not supported in HTTP.
---2019-10-08 09:43:52--  https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/f2tvf2j9cglutjhrdsg71a1u1tdu2qno/1570536000000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download
-Resolving doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)... 172.217.6.1, 2607:f8b0:4009:811::2001
-Connecting to doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)|172.217.6.1|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [application/octet-stream]
-Saving to: ‘C.hydro_6008_R2.fastq’
-
-     0K ........ ........ ........ ........ 15.7M
- 32768K ........ ........ ........ ........ 15.7M
- 65536K ........ ........ ........ ........ 15.7M
- 98304K ........ ........ ........ ........ 16.0M
-131072K ........ ........ ........ ........ 14.6M
-163840K ........ ........ ........ ........ 15.0M
-196608K ........ ........ .......           15.8M=14s
-
-2019-10-08 09:44:07 (15.5 MB/s) - ‘C.hydro_6008_R2.fastq’ saved [225555584]
-
-(base) [xinqianc@colossus week_4_assignment]$ ls
-Carboxydothermus_hydrogenoformans.fasta  C.hydro_6008_R2.fastq
-C.hydro_6008_R1.fastq
 (base) [xinqianc@colossus week_4_assignment]$ fastqc C.hydro_6008_R1.fastq
 Started analysis of C.hydro_6008_R1.fastq
 Approx 5% complete for C.hydro_6008_R1.fastq
@@ -108,10 +28,6 @@ Approx 90% complete for C.hydro_6008_R1.fastq
 Approx 95% complete for C.hydro_6008_R1.fastq
 Approx 100% complete for C.hydro_6008_R1.fastq
 Analysis complete for C.hydro_6008_R1.fastq
-(base) [xinqianc@colossus week_4_assignment]$ ls
-Carboxydothermus_hydrogenoformans.fasta  C.hydro_6008_R1_fastqc.zip
-C.hydro_6008_R1.fastq                    C.hydro_6008_R2.fastq
-C.hydro_6008_R1_fastqc.html
 (base) [xinqianc@colossus week_4_assignment]$ fastqc C.hydro_6008_R2.fastq
 Started analysis of C.hydro_6008_R2.fastq
 Approx 5% complete for C.hydro_6008_R2.fastq
@@ -401,15 +317,8 @@ Headers:
     color: 0
     reverse: 1
 Total time for backward call to driver() for mirror index: 00:00:00
-(base) [xinqianc@colossus week_4_assignment]$ ls
-Carboxydothermus_hydrogenoformans.fasta  C.hydro_6008_R1_fastqc.zip
-C.hydro.1.bt2                            C.hydro_6008_R2.cutadapt.fastq
-C.hydro.2.bt2                            C.hydro_6008_R2.fastq
-C.hydro.3.bt2                            C.hydro_6008_R2_fastqc.html
-C.hydro.4.bt2                            C.hydro_6008_R2_fastqc.zip
-C.hydro_6008_R1.cutadapt.fastq           C.hydro.rev.1.bt2
-C.hydro_6008_R1.fastq                    C.hydro.rev.2.bt2
-C.hydro_6008_R1_fastqc.html
+
+
 (base) [xinqianc@colossus week_4_assignment]$ bowtie2 -x C.hydro -1 C.hydro_6008_R1.cutadapt.fastq -2 C.hydro_6008_R2.cutadapt.fastq -S 6008.sam
 955420 reads; of these:
   955420 (100.00%) were paired; of these:
@@ -426,4 +335,3 @@ C.hydro_6008_R1_fastqc.html
         23580 (4.96%) aligned exactly 1 time
         3627 (0.76%) aligned >1 times
 76.54% overall alignment rate
-(base) [xinqianc@colossus week_4_assignment]$
