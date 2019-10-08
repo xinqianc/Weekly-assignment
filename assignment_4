@@ -1,0 +1,429 @@
+##(base) [xinqianc@colossus in_class_assignments]$ mkdir week_4_assignment
+##(base) [xinqianc@colossus in_class_assignments]$ cd week_4_assignment/
+(base) [xinqianc@colossus week_4_assignment]$ ls
+(base) [xinqianc@colossus week_4_assignment]$ conda install entrez-direct
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+# All requested packages already installed.
+
+(base) [xinqianc@colossus week_4_assignment]$ efetch -db=nucleotide -id=CP000141.1 -format=fasta>Carboxydothermus_hydrogenoformans.fasta
+(base) [xinqianc@colossus week_4_assignment]$ ls
+Carboxydothermus_hydrogenoformans.fasta
+(base) [xinqianc@colossus week_4_assignment]$ gdown.pl https://drive.google.com/file/d/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS/edit C.hydro_6008_R1.fastq
+Cannot open cookies file ‘gdown.cookie.temp’: No such file or directory
+--2019-10-08 09:43:28--  https://docs.google.com/uc?id=1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS&export=download
+Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
+Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘C.hydro_6008_R1.fastq’
+
+     0K                                     20.2M=0s
+
+2019-10-08 09:43:28 (20.2 MB/s) - ‘C.hydro_6008_R1.fastq’ saved [3260]
+
+--2019-10-08 09:43:28--  https://docs.google.com/uc?export=download&confirm=K7B5&id=1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS
+Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
+Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://doc-0k-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/gj531por8be9l449m38t1chbi5h5vb8t/1570536000000/00987064705613225626/*/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS?e=download [following]
+Warning: wildcards not supported in HTTP.
+--2019-10-08 09:43:29--  https://doc-0k-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/gj531por8be9l449m38t1chbi5h5vb8t/1570536000000/00987064705613225626/*/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS?e=download
+Resolving doc-0k-40-docs.googleusercontent.com (doc-0k-40-docs.googleusercontent.com)... 172.217.6.1, 2607:f8b0:4009:811::2001
+Connecting to doc-0k-40-docs.googleusercontent.com (doc-0k-40-docs.googleusercontent.com)|172.217.6.1|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/octet-stream]
+Saving to: ‘C.hydro_6008_R1.fastq’
+
+     0K ........ ........ ........ ........ 15.7M
+ 32768K ........ ........ ........ ........ 15.7M
+ 65536K ........ ........ ........ ........ 15.8M
+ 98304K ........ ........ ........ ........ 16.0M
+131072K ........ ........ ........ ........ 13.8M
+163840K ........ ........ ........ ........ 15.6M
+196608K ........ ........ .......           15.6M=14s
+
+2019-10-08 09:43:43 (15.4 MB/s) - ‘C.hydro_6008_R1.fastq’ saved [225555584]
+
+(base) [xinqianc@colossus week_4_assignment]$ gdown.pl https://drive.google.com/file/d/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK/edit C.hydro_6008_R2.fastq
+Cannot open cookies file ‘gdown.cookie.temp’: No such file or directory
+--2019-10-08 09:43:52--  https://docs.google.com/uc?id=1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK&export=download
+Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
+Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘C.hydro_6008_R2.fastq’
+
+     0K                                     19.8M=0s
+
+2019-10-08 09:43:52 (19.8 MB/s) - ‘C.hydro_6008_R2.fastq’ saved [3260]
+
+--2019-10-08 09:43:52--  https://docs.google.com/uc?export=download&confirm=8O_U&id=1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK
+Resolving docs.google.com (docs.google.com)... 172.217.9.78, 2607:f8b0:4009:816::200e
+Connecting to docs.google.com (docs.google.com)|172.217.9.78|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/f2tvf2j9cglutjhrdsg71a1u1tdu2qno/1570536000000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download [following]
+Warning: wildcards not supported in HTTP.
+--2019-10-08 09:43:52--  https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/f2tvf2j9cglutjhrdsg71a1u1tdu2qno/1570536000000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download
+Resolving doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)... 172.217.6.1, 2607:f8b0:4009:811::2001
+Connecting to doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)|172.217.6.1|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/octet-stream]
+Saving to: ‘C.hydro_6008_R2.fastq’
+
+     0K ........ ........ ........ ........ 15.7M
+ 32768K ........ ........ ........ ........ 15.7M
+ 65536K ........ ........ ........ ........ 15.7M
+ 98304K ........ ........ ........ ........ 16.0M
+131072K ........ ........ ........ ........ 14.6M
+163840K ........ ........ ........ ........ 15.0M
+196608K ........ ........ .......           15.8M=14s
+
+2019-10-08 09:44:07 (15.5 MB/s) - ‘C.hydro_6008_R2.fastq’ saved [225555584]
+
+(base) [xinqianc@colossus week_4_assignment]$ ls
+Carboxydothermus_hydrogenoformans.fasta  C.hydro_6008_R2.fastq
+C.hydro_6008_R1.fastq
+(base) [xinqianc@colossus week_4_assignment]$ fastqc C.hydro_6008_R1.fastq
+Started analysis of C.hydro_6008_R1.fastq
+Approx 5% complete for C.hydro_6008_R1.fastq
+Approx 10% complete for C.hydro_6008_R1.fastq
+Approx 15% complete for C.hydro_6008_R1.fastq
+Approx 20% complete for C.hydro_6008_R1.fastq
+Approx 25% complete for C.hydro_6008_R1.fastq
+Approx 30% complete for C.hydro_6008_R1.fastq
+Approx 35% complete for C.hydro_6008_R1.fastq
+Approx 40% complete for C.hydro_6008_R1.fastq
+Approx 45% complete for C.hydro_6008_R1.fastq
+Approx 50% complete for C.hydro_6008_R1.fastq
+Approx 55% complete for C.hydro_6008_R1.fastq
+Approx 60% complete for C.hydro_6008_R1.fastq
+Approx 65% complete for C.hydro_6008_R1.fastq
+Approx 70% complete for C.hydro_6008_R1.fastq
+Approx 75% complete for C.hydro_6008_R1.fastq
+Approx 80% complete for C.hydro_6008_R1.fastq
+Approx 85% complete for C.hydro_6008_R1.fastq
+Approx 90% complete for C.hydro_6008_R1.fastq
+Approx 95% complete for C.hydro_6008_R1.fastq
+Approx 100% complete for C.hydro_6008_R1.fastq
+Analysis complete for C.hydro_6008_R1.fastq
+(base) [xinqianc@colossus week_4_assignment]$ ls
+Carboxydothermus_hydrogenoformans.fasta  C.hydro_6008_R1_fastqc.zip
+C.hydro_6008_R1.fastq                    C.hydro_6008_R2.fastq
+C.hydro_6008_R1_fastqc.html
+(base) [xinqianc@colossus week_4_assignment]$ fastqc C.hydro_6008_R2.fastq
+Started analysis of C.hydro_6008_R2.fastq
+Approx 5% complete for C.hydro_6008_R2.fastq
+Approx 10% complete for C.hydro_6008_R2.fastq
+Approx 15% complete for C.hydro_6008_R2.fastq
+Approx 20% complete for C.hydro_6008_R2.fastq
+Approx 25% complete for C.hydro_6008_R2.fastq
+Approx 30% complete for C.hydro_6008_R2.fastq
+Approx 35% complete for C.hydro_6008_R2.fastq
+Approx 40% complete for C.hydro_6008_R2.fastq
+Approx 45% complete for C.hydro_6008_R2.fastq
+Approx 50% complete for C.hydro_6008_R2.fastq
+Approx 55% complete for C.hydro_6008_R2.fastq
+Approx 60% complete for C.hydro_6008_R2.fastq
+Approx 65% complete for C.hydro_6008_R2.fastq
+Approx 70% complete for C.hydro_6008_R2.fastq
+Approx 75% complete for C.hydro_6008_R2.fastq
+Approx 80% complete for C.hydro_6008_R2.fastq
+Approx 85% complete for C.hydro_6008_R2.fastq
+Approx 90% complete for C.hydro_6008_R2.fastq
+Approx 95% complete for C.hydro_6008_R2.fastq
+Approx 100% complete for C.hydro_6008_R2.fastq
+Analysis complete for C.hydro_6008_R2.fastq
+(base) [xinqianc@colossus week_4_assignment]$ cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o C.hydro_6008_R1.cutadapt.fastq -p C.hydro_6008_R2.cutadapt.fastq C.hydro_6008_R1.fastq C.hydro_6008_R2.fastq
+This is cutadapt 2.5 with Python 3.7.3
+Command line parameters: -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o C.hydro_6008_R1.cutadapt.fastq -p C.hydro_6008_R2.cutadapt.fastq C.hydro_6008_R1.fastq C.hydro_6008_R2.fastq
+Processing reads on 1 core in paired-end mode ...
+[8<----------] 00:00:01        60,000 reads  @     17.0 µs/read;   3.52 M reads/[8=----------] 00:00:02       120,000 reads  @     16.7 µs/read;   3.60 M reads/[ 8<---------] 00:00:03       190,000 reads  @     16.6 µs/read;   3.61 M reads/[ 8=---------] 00:00:04       260,000 reads  @     16.6 µs/read;   3.61 M reads/[  8<--------] 00:00:05       310,000 reads  @     20.3 µs/read;   2.96 M reads/[  8=--------] 00:00:06       370,000 reads  @     18.3 µs/read;   3.29 M reads/[   8<-------] 00:00:07       430,000 reads  @     16.8 µs/read;   3.57 M reads/[   8=-------] 00:00:08       500,000 reads  @     16.6 µs/read;   3.61 M reads/[    8<------] 00:00:09       570,000 reads  @     16.6 µs/read;   3.60 M reads/[    8=------] 00:00:10       630,000 reads  @     16.9 µs/read;   3.54 M reads/[     8<-----] 00:00:11       700,000 reads  @     16.6 µs/read;   3.61 M reads/[     8=-----] 00:00:13       770,000 reads  @     16.6 µs/read;   3.62 M reads/[      8<----] 00:00:14       840,000 reads  @     16.6 µs/read;   3.61 M reads/[      8=----] 00:00:15       910,000 reads  @     16.6 µs/read;   3.61 M reads/[       8<---] 00:00:16       980,000 reads  @     16.5 µs/read;   3.63 M reads/[       8=---] 00:00:16     1,000,000 reads  @     17.0 µs/read;   3.54 M reads/minute
+Finished in 17.25 s (17 us/read; 3.48 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:          1,000,000
+  Read 1 with adapter:                  18,001 (1.8%)
+  Read 2 with adapter:                  14,855 (1.5%)
+Pairs that were too short:              43,646 (4.4%)
+Pairs with too many N:                     934 (0.1%)
+Pairs written (passing filters):       955,420 (95.5%)
+
+Total basepairs processed:   152,000,000 bp
+  Read 1:    76,000,000 bp
+  Read 2:    76,000,000 bp
+Quality-trimmed:               4,276,131 bp (2.8%)
+  Read 1:     1,202,363 bp
+  Read 2:     3,073,768 bp
+Total written (filtered):    143,788,162 bp (94.6%)
+  Read 1:    72,011,160 bp
+  Read 2:    71,777,002 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 18001 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 17.6%
+  C: 26.4%
+  G: 24.5%
+  T: 31.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       15504   15625.0 0       15504
+4       1902    3906.2  0       1902
+5       413     976.6   0       413
+6       112     244.1   0       112
+7       21      61.0    0       21
+8       2       15.3    0       2
+9       30      3.8     0       0 30
+10      15      1.0     1       0 15
+12      2       0.1     1       0 2
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: CTGTCTCTTATACACATCTGACGCTGCCGACGA; Type: regular 3'; Length: 33; Trimmed: 14855 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 21.2%
+  C: 30.9%
+  G: 30.3%
+  T: 17.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       12392   15625.0 0       12392
+4       1870    3906.2  0       1870
+5       430     976.6   0       430
+6       92      244.1   0       92
+7       13      61.0    0       13
+8       2       15.3    0       2
+9       27      3.8     0       2 25
+10      24      1.0     1       0 24
+11      3       0.2     1       0 3
+12      1       0.1     1       0 1
+13      1       0.0     1       0 1
+(base) [xinqianc@colossus week_4_assignment]$ bowtie2-build Carboxydothermus_hydrogenoformans.fasta C.hydro
+Settings:
+  Output files: "C.hydro.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  Carboxydothermus_hydrogenoformans.fasta
+Building a SMALL index
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+bmax according to bmaxDivN setting: 600379
+Using parameters --bmax 450285 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 450285 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 2.40152e+06 (target: 450284)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 2401519 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:00:01
+Returning block of 2401520 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 696564
+fchr[G]: 1201899
+fchr[T]: 1706396
+fchr[$]: 2401519
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4995058 bytes to primary EBWT file: C.hydro.1.bt2
+Wrote 600384 bytes to secondary EBWT file: C.hydro.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 2401519
+    bwtLen: 2401520
+    sz: 600380
+    bwtSz: 600380
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 150095
+    offsSz: 600380
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 12508
+    numLines: 12508
+    ebwtTotLen: 800512
+    ebwtTotSz: 800512
+    color: 0
+    reverse: 0
+Total time for call to driver() for forward index: 00:00:01
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+  Time to reverse reference sequence: 00:00:00
+bmax according to bmaxDivN setting: 600379
+Using parameters --bmax 450285 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 450285 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 2.40152e+06 (target: 450284)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 2401519 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 2401520 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 696564
+fchr[G]: 1201899
+fchr[T]: 1706396
+fchr[$]: 2401519
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4995058 bytes to primary EBWT file: C.hydro.rev.1.bt2
+Wrote 600384 bytes to secondary EBWT file: C.hydro.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 2401519
+    bwtLen: 2401520
+    sz: 600380
+    bwtSz: 600380
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 150095
+    offsSz: 600380
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 12508
+    numLines: 12508
+    ebwtTotLen: 800512
+    ebwtTotSz: 800512
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:00:00
+(base) [xinqianc@colossus week_4_assignment]$ ls
+Carboxydothermus_hydrogenoformans.fasta  C.hydro_6008_R1_fastqc.zip
+C.hydro.1.bt2                            C.hydro_6008_R2.cutadapt.fastq
+C.hydro.2.bt2                            C.hydro_6008_R2.fastq
+C.hydro.3.bt2                            C.hydro_6008_R2_fastqc.html
+C.hydro.4.bt2                            C.hydro_6008_R2_fastqc.zip
+C.hydro_6008_R1.cutadapt.fastq           C.hydro.rev.1.bt2
+C.hydro_6008_R1.fastq                    C.hydro.rev.2.bt2
+C.hydro_6008_R1_fastqc.html
+(base) [xinqianc@colossus week_4_assignment]$ bowtie2 -x C.hydro -1 C.hydro_6008_R1.cutadapt.fastq -2 C.hydro_6008_R2.cutadapt.fastq -S 6008.sam
+955420 reads; of these:
+  955420 (100.00%) were paired; of these:
+    239311 (25.05%) aligned concordantly 0 times
+    677659 (70.93%) aligned concordantly exactly 1 time
+    38450 (4.02%) aligned concordantly >1 times
+    ----
+    239311 pairs aligned concordantly 0 times; of these:
+      1604 (0.67%) aligned discordantly 1 time
+    ----
+    237707 pairs aligned 0 times concordantly or discordantly; of these:
+      475414 mates make up the pairs; of these:
+        448207 (94.28%) aligned 0 times
+        23580 (4.96%) aligned exactly 1 time
+        3627 (0.76%) aligned >1 times
+76.54% overall alignment rate
+(base) [xinqianc@colossus week_4_assignment]$
