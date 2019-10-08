@@ -335,3 +335,31 @@ Total time for backward call to driver() for mirror index: 00:00:00
         23580 (4.96%) aligned exactly 1 time
         3627 (0.76%) aligned >1 times
 76.54% overall alignment rate
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Issue:
+if we use  gbk instead of fasta by efetch, we will get 0 precent alignment
+efetch -db=nucleotide -id=CP000141.1 -format=gb>Carboxydothermus hydrogenoformans.gbk
+
+because genbank file not only has DNA sequence but also contains other information like CDS which may disturb our alignment!
+
+so the true command is : efetch -db=nucleotide -id=CP000141.1 -format=fasta>Carboxydothermus_hydrogenoformans.fastaIssue:
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o C.hydro_6008_R1.cutadapt.fastq -p C.hydro_6008_R2.cutadapt.fastq C.hydro_6008_R1.fastq C.hydro_6008_R2.fastq
+-q = specifies the minimum quality score (here we have use 20)
+-a = adaptor sequences for forward read (Here is where you can find more information about Illumina adaptors. -A = adaptor sequence for reverse read
+-m = minimum length
+--max-n = maximum number of N calls allowed
+-o = forward output (because we gave paired inputs we will specify two outputs)
+-p = reverse output
+
+-----------------------------------------------------------------------------------------------------------------------------------
+First we download our reference reads from NCBI , format : fasta
+And then we download our raw reads in fastaq format
+Then we use Quality control to cut the sequences of poor quality in our raw reads (read 1 and read 2). We will have html to view our sequences'quality.(find in home directory)
+Before alignment, cutadapt is also used for our raw reads
+Then we align our reference sequences with our tailored reads (do QA/QC,cutapapt) and get the output in .sam file
+
+
+
