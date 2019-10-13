@@ -20,3 +20,7 @@ check quality of the assembly using quast
 =========
 cd  P.Angola_spades_output
 quast contigs.fasta -o Quast_contigs
+
+=======================================================
+Use WinSCP to open the .html file to examine the quality.
+
