@@ -14,3 +14,9 @@ cd ..
 (base) [xinqianc@colossus week_5]$ cd de_novo_assembly_week_5/
 (base) [xinqianc@colossus de_novo_assembly_week_5]$ conda activate de_novo
 spades.py -k 21,51,71,91,111,127 --careful --pe1-1 P.Angola_27_R1.cutadapt.fastq --pe1-2 P.Angola_27_R2.cutadapt.fastq -o P.Angola_spades_output
+
+=========
+check quality of the assembly using quast
+=========
+cd  P.Angola_spades_output
+quast contigs.fasta -o Quast_contigs
