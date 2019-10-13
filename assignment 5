@@ -24,3 +24,9 @@ quast contigs.fasta -o Quast_contigs
 =======================================================
 Use WinSCP to open the .html file to examine the quality.
 
+
+(de_novo) [xinqianc@colossus P.Angola_spades_output]$ cd Quast_contigs/
+(de_novo) [xinqianc@colossus Quast_contigs]$ ls
+basic_stats     quast.log    report.tex  transposed_report.tex
+icarus.html     report.html  report.tsv  transposed_report.tsv
+icarus_viewers  report.pdf   report.txt  transposed_report.txt
