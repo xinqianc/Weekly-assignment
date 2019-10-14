@@ -14,6 +14,12 @@ start codon --------------------------------stop codon (protein)
 chanllenges:
 in eukarytes:
 when splicing out introns, open reading fragement may shift(because introns may not be spliced 3.3.3.3.3.3.3.3.)
+introns problem:
+(1) reference sequence like transporter 1, of its one gene has 120nt introns, but one unknown we assume has 100nt, this may be the problem, 
+because we don't know how to align our introns (https://biology.stackexchange.com/questions/8204/detecting-introns-and-exons)
+some rules for detecting introns and exons but it may be wrong.
+(2)  introns can also have stop codon in it (in protein it is spliced out, but in genome it shows its stop codon which may confuse the computational 
+model since they may think this is a stop codon site which actually not)
 
 extrinsic approach: only find genes in the database, may not find new genes (known, known)
 intrinsic approach: known, unknown ; find the genes by their features/signatures
