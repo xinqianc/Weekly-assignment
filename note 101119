@@ -37,3 +37,11 @@ we want higher N50 to have the longer contigs.
 L50
 
 3.15Mb<3.2Mb (hard time to assembly repeated sequences,...) 3.2(ideally)
+
+contigs < 500bp can not be trust
+
+#### procaryote:
+goal:
+# number : contigs < 200
+# largest contigs < 100,000 (we have 100 genes in the contigs)
+
