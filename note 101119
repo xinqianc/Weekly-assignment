@@ -45,3 +45,27 @@ goal:
 # number : contigs < 200
 # largest contigs < 100,000 (we have 100 genes in the contigs)
 
+
+log file :
+help us to find if we have any problems in the program and we forget about that...
+###############################################################################################################################
+(base) [xinqianc@colossus T1_spades_output]$ less spades.log
+Command line: /home/campus25/xinqianc/miniconda3/envs/de_novo/bin/spades.py     -k      21,51,71,91,111,127     --careful       --pe1-1 /var/tmp/scratch/xinqianc/in_class_assignments/de_novo_assembly/T1_R1.cutadapt.fastq    --pe1-2 /var/tmp/scratch/xinqianc/in_class_assignments/de_novo_assembly/T1_R2.cutadapt.fastq    -o      /var/tmp/scratch/xinqianc/in_class_assignments/de_novo_assembly/T1_spades_output
+
+System information:
+  SPAdes version: 3.11.1
+  Python version: 3.6.7
+  OS: Linux-3.10.0-1062.el7.x86_64-x86_64-with-redhat-7.7-Maipo
+
+Output dir: /var/tmp/scratch/xinqianc/in_class_assignments/de_novo_assembly/T1_spades_output
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+
+
+
