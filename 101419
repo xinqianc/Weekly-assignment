@@ -1,3 +1,22 @@
 Annotation:
 
+Gene calling : (different from prokaryote to eukaryotes)
 
+use BLAST to find genes. (BLASTn)
+
+
+useful information to find genes
+
+promoter region ------------------------------ (DNA)
+RBS region ----------------------------------  (RNA)
+start codon --------------------------------stop codon (protein)
+
+chanllenges:
+in eukarytes:
+when splicing out introns, open reading fragement may shift(because introns may not be spliced 3.3.3.3.3.3.3.3.)
+
+extrinsic approach: only find genes in the database, may not find new genes (known, known)
+intrinsic approach: known, unknown ; find the genes by their features/signatures
+
+
+protein family: proteins that have similar/same functions  like transporters.
