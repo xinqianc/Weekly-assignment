@@ -6,3 +6,44 @@ contigs ---> identify elements(genes)---->classify elements-->  functional ident
 (base) [xinqianc@colossus in_class_assignments]$ mkdir blast
 (base) [xinqianc@colossus in_class_assignments]$ cd blast/
 
+(base) [xinqianc@colossus blast]$ wget https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/In_class/Loki_protein.faa
+--2019-10-16 13:52:48--  https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/In_class/Loki_protein.faa
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 515365 (503K) [text/plain]
+Saving to: ‘Loki_protein.faa’
+
+100%[======================================>] 515,365     --.-K/s   in 0.1s
+
+2019-10-16 13:52:48 (4.52 MB/s) - ‘Loki_protein.faa’ saved [515365/515365]
+
+(base) [xinqianc@colossus blast]$ makeblastdb -in Loki_protein.faa -dbtype prot -title Loki_protein
+
+Building a new DB, current time: 10/16/2019 13:53:38
+New DB name:   /var/tmp/scratch/xinqianc/in_class_assignments/blast/Loki_protein.faa
+New DB title:  Loki_protein
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 1578 sequences in 0.0336511 seconds.
+(base) [xinqianc@colossus blast]$ wget https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/In_class/CPN_BL.fasta
+--2019-10-16 13:53:50--  https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/In_class/CPN_BL.fasta
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2835 (2.8K) [text/plain]
+Saving to: ‘CPN_BL.fasta’
+
+100%[======================================>] 2,835       --.-K/s   in 0s
+
+2019-10-16 13:53:51 (27.3 MB/s) - ‘CPN_BL.fasta’ saved [2835/2835]
+
+
+BLAST Database error: No alias or index file found for protein database [PROKKA_06032019.faa] in search path [/var/tmp/scratch/xinqianc/in_class_assignments/blast::]
+(base) [xinqianc@colossus blast]$ blastp -db Loki_protein.faa -query CPN_BL.fasta -out CPN_BLAST.txt -outfmt 7
+(base) [xinqianc@colossus blast]$ ls
+CPN_BLAST.txt  Loki_protein.faa      Loki_protein.faa.pin
+CPN_BL.fasta   Loki_protein.faa.phr  Loki_protein.faa.psq
+(base) [xinqianc@colossus blast]$
