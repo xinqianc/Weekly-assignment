@@ -1,3 +1,6 @@
+contigs ---> identify elements(genes)---->classify elements-->  functional identification  of protein product
+
+
 (base) [xinqianc@colossus ~]$ cd /scratch_30_day_tmp/xinqianc
 (base) [xinqianc@colossus xinqianc]$ cd in_class_assignments/
 (base) [xinqianc@colossus in_class_assignments]$ mkdir blast
