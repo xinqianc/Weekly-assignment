@@ -1,0 +1,5 @@
+HMM
+
+wget: download database
+makeblastdb -in Loki_protein.faa -dbtype prot -title Loki_protein
+(input Loki_protein.faa)
