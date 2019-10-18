@@ -47,3 +47,9 @@ BLAST Database error: No alias or index file found for protein database [PROKKA_
 CPN_BLAST.txt  Loki_protein.faa      Loki_protein.faa.pin
 CPN_BL.fasta   Loki_protein.faa.phr  Loki_protein.faa.psq
 (base) [xinqianc@colossus blast]$
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+blast:
+by using Linux shell, we could
