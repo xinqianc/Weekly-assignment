@@ -1,0 +1,62 @@
+Great overview!
+
+Some comments
+1) A weakness of Illumina is the short reads.  While there are methods for getting more information the maximum length of an illumina read is 300 bp, which relatively short even compared to Sanger sequencing.
+2) another weakness of single molecule sequencing is the error rates, which are getting better, but are commonly thought of as a weakness.
+
+
+Summary
+
+
+Generation 0
+porto-sequencing : sequence some base pairs of DNA, not the whole genome.
+
+Generation 1
+manual sequencing(1970s-1980s). Two major methods are used in manual sequencing. First one is by Sanger, so it is called Sanger sequencing. Another one is Maxam-Gilbert sequencing.
+(1)Maxam-Gilbert sequencing uses toxic chemicals to react with DNA and cleaves DNA in certain bases, and then runs those DNA pieces on the gel. So by examining the patterns of DNA on the gel, we could read the DNA sequence.
+Strengths: it is a way to sequence DNA
+Weakness: it uses toxic chemicals. 
+
+(2)Sanger sequencing uses chain-terminating inhibitors which are ddNTPs(dideoxynucleotides triphosphates). This needs four tubes, each tube contains four different ddNTPs such as ddATPs, ddGTPs,ddCTPs and ddTTPs, and DNA will be replicated in each tube. For one particular tube with ddATPs, whenever there is an A base in the DNA, ddATPs will stop DNA replication and release the pieces of DNA terminating with A such as A, ATTTA, ATTTAGCCCA and so on. And other tubes with other ddNTPs will do the same thing. After DNA replication, DNA products of each tube will run in separated ladders and then from the patterns shown in the gel, DNA sequence could be read from the bottom to the top.
+Strengths: less toxic than Maxam-Gilbert sequencing.
+Weakness: time-consuming.
+
+Generation 2
+Automated Sanger (Used for human genome)
+There are two different types of automated sequencing. One is automated Sanger sequencing. DNA replication could happen in a single tube and DNA sequence could be read in a single ladder based on four different bases labeled with four different fluorescence. The laser could help to recognize different fluorescence and the computer finally will give the DNA sequence based on fluorescence reading.
+Strengths: faster, cheaper, nicer than before.
+Weakness: need to have a decent amount of DNA. ( use PCR to amplify DNA or use E.coli to get copies of DNA) Colony picking is a rate-limiting step.
+
+Generation 3
+Clusters-based sequencing (Not clones), “Nextgen sequencing”
+Overall strengths: faster, cheaper, and only need a small amount of DNA to do sequencing.
+
+(1)Roche 454: prepare DNA samples, and then do some library constructions (basically just modified DNA for reading ). After this, capture single-strand DNA on the surface of beads and run PCR reaction to make multiple copies of original DNA. Then let those beads be into holes of the slide, and each hole only contains one bead. Finally, read signals from each hole and get the whole DNA sequence.
+Weakness: not very accurate: because it quantifies the signals. For example: when two AA bases are in the DNA, it recognizes double A bases by quantifying signals instead of reading them individually. What’s more, other errors could be made in the PCR step and other steps.
+Strengths: Quicker and cheaper than before.
+Current uses: 454 platform
+
+(2)Illumina (dominant the market now)
+Illumina sequencing is kind of similar to Roche 454, but it uses a slightly different method called sequencing-by-synthesis. It doesn’t sequence DNA after it completes the amplification. The preparation step is just like Roche 454, first to cleave DNA, make it become single-strand and modify DNA based on needs (this time it adds adaptors to the ends of the DNA). After this, the original DNA pieces randomly bind to adaptors on the slide and then amplify DNA at certain local areas by using bridge PCR, and then we will have many different clusters of same DNA pieces on the slide. The machine will read the signals when amplifying the DNA pieces.
+Strengths: Faster, cheaper, more accurate and can sequence larger DNA than before.
+Now multiplexing is a key part in Illumina sequencing. It can sequence more than one samples on a slide by giving each sample a barcode (the barcode is a specific DNA sequence that adds at the end of each sample to distinguish them from one another.)
+Long-read sequencing: assemble the long pieces of DNA first from small DNA fragments, and then assemble the whole DNA by those long pieces.
+Current uses: HiSeq X Ten sequencing machine
+
+(3)Ion Torrent PGM
+Similar to Illumina, but it reads hydrogen instead of lights by changing the pH.
+Strengths: Cheaper than Illumina.
+
+
+Application of sequencing
+(1)Hic crosslinking sequencing: build the link between physical adjacent DNA strands and sequence them together.
+(2)Single-cell sequencing: sequence DNA in the single cell.
+
+
+Generation 4
+single-molecule sequencing
+(1)Pacific Biosciences:
+Fix a DNA polymerase on a hole of a slide and then attach a single DNA to the polymerase. Do
+DNA replication on the polymerase and read the labeled nucleotides of the single DNA.
+Strengths: faster than generation 3. Precise, and can get long read from this method. Can find the methylated bases by looking at the time difference between un-methylated one and methylated one. (Can find modifications of the DNA, related to Epigenetics)
+Weakness: burn out the enzyme if it runs for too long.
