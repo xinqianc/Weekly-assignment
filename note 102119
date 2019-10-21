@@ -1,0 +1,19 @@
+conda create -n annotation prokka augustus
+ln -s /scratch_30_day_tmp/smtechtm/ scratch
+(ln: link my home direacotry to stratch)
+conda activate annotation
+cd ~/scratch/in_class_assignments
+mkdir prokka_annotation
+
+
+repeat region 5: Crisp region 5
+
+less T1.txt
+less T1.tsv (has COGs)
+less T1.tbl
+
+orthologous genes: in different species
+
+1.GO: which functions are enriched (can compare with other species)
+2.metabolic pathway (which is completed, which is missing, do they do different pathways ?)
+3.COG
