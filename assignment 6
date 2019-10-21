@@ -1,0 +1,26 @@
+(base) [xinqianc@colossus xinqianc]$ cd in_class_assignments/
+(base) [xinqianc@colossus in_class_assignments]$ mkdir week_6
+(base) [xinqianc@colossus in_class_assignments]$ cd week_6
+(base) [xinqianc@colossus week_6]$ wget https://github.com/stechtmann/BL4300-5300/raw/master/data/Weekly_Assignment_data/Unk_therm.faa
+(Download the list of proteins from the unknown thermophile.)
+(base) [xinqianc@colossus week_6]$ makeblastdb -in Unk_therm.faa -dbtype prot -title Unk_therm
+(Make a blastable database for those protein sequences)
+(base) [xinqianc@colossus week_6]$wget https://github.com/stechtmann/BL4300-5300/raw/master/data/Weekly_Assignment_data/HSP_prot.fasta
+(download the query sequences)
+(base) [xinqianc@colossus week_6]$ blastp -db Unk_therm.faa -query HSP_prot.fasta -out HSP_BLAST.txt -outfmt 7
+(-outfmt 7 means output format 7, we could use blasp -h to check the 7th output: [-db_soft_mask filtering_algorithm] [-db_hard_mask filtering_algorithm] )
+
+(base) [xinqianc@colossus week_6]$ ls
+HSP_BLAST.txt   Unk_therm.faa      Unk_therm.faa.pin
+HSP_prot.fasta  Unk_therm.faa.phr  Unk_therm.faa.psq
+(base) [xinqianc@colossus week_6]$ less HSP_BLAST.txt
+
+(now use WinSCP to find the scratch file)
+
+-------------------------------------------------------------------------------------
+Questions:
+(1)How many HSPs were found in the unknown organism?
+(2)Provide your justification for how many HSPs were in the organism (use information in the BLAST ouput E-value, length, percent ID, etc).
+(3)How many HSP have paralogs?
+(4)Provide a justification for the presence of paralogs.
+(5)Upload your answers including a link to the github page to canvas.
