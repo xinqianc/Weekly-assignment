@@ -20,10 +20,8 @@ HSP_prot.fasta  Unk_therm.faa.phr  Unk_therm.faa.psq
 -------------------------------------------------------------------------------------
 Questions:
 (1)How many HSPs were found in the unknown organism?
-A:
-(base) [xinqianc@colossus week_6]$ grep "Unk" HSP_BLAST.txt | uniq | wc -l
-77
-77-6(Database)=71
+10
+
 (2)Provide your justification for how many HSPs were in the organism (use information in the BLAST ouput E-value, length, percent ID, etc).
 A:
 Based on the E-value, they are the candidates for potential HSPs in the unknown organism.
