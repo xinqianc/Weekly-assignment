@@ -20,11 +20,13 @@ HSP_prot.fasta  Unk_therm.faa.phr  Unk_therm.faa.psq
 -------------------------------------------------------------------------------------
 Questions:
 (1)How many HSPs were found in the unknown organism?
-10
+7
 
 (2)Provide your justification for how many HSPs were in the organism (use information in the BLAST ouput E-value, length, percent ID, etc).
-A:
-Based on the E-value, they are the candidates for potential HSPs in the unknown organism.
+(3)How many HSP have paralogs?
+(4)Provide a justification for the presence of paralogs.
+Answer:
+1.Based on the E-value, they are the candidates for potential HSPs in the unknown organism.
 WP_103686269.1	Unk_1985	31.707	123	73	2	45	167	22	133	6.01e-17	70.1
 WP_103686269.1	Unk_1863	34.066	91	56	1	79	169	31	117	2.11e-14	62.8
 WP_103686269.1	Unk_1860	30.833	120	72	4	49	167	8	117	2.20e-14	62.8
@@ -36,7 +38,7 @@ AAA18300.1	Unk_301	27.723	101	67	2	152	252	100	194	7.26e-05	41.2
 AAA18300.1	Unk_1187	26.946	167	106	6	175	338	172	325	1.30e-04	40.4
 AEG34553.1	Unk_1970	32.800	625	285	17	557	1101	27	596	1.76e-54	201
 
-Based on the length and identity, between twilight zone and safety zone
+2.Based on the length and identity, between twilight zone and safety zone
 WP_103686269.1	Unk_1985	31.707	123	73	2	45	167	22	133	6.01e-17	70.1
 WP_103686269.1	Unk_1863	34.066	91	56	1	79	169	31	117	2.11e-14	62.8
 WP_103686269.1	Unk_1860	30.833	120	72	4	49	167	8	117	2.20e-14	62.8
@@ -50,19 +52,20 @@ AEG34553.1	Unk_1970	32.800	625	285	17	557	1101	27	596	1.76e-54	201
 in the twilight zone:
 AAA18300.1	Unk_301	27.723	101	67	2	152	252	100	194	7.26e-05	41.2
 
-Based on the bit score: ????????
+Those ten sequences I pick are all in the twilight zone or safety zone and have good E-value and bit scores.
+For Unk_1985,Unk_1863 and Unk_1860, they may be paralogs to each other since they have the quite similar identity, length and bit score.
+Therefore,genes such as Unk_1985, Unk_1860, Unk_1863 in the unknown organism may be paralogs to each other and match gene WP_103686269.1
+For genes that match AAA18300.1, Unk_1842, Unk_301 and Unk_1187 have little possible to be paralogs with each other because their length doesn't match each other very well,
+and therefore only Unk_1842 is the homolog of AAA18300.1.(In my perspective, one query could only match one unknown gene except we find paralogs of unknown genes)
+Overall, there may be seven HSPs in our organism which need further verification by experiments.
+Potential HSPs:
+WP_103686269.1 VS Unk_1985,Unk_1863,Unk_1860	
+NP_418567.1 VS Unk_30	
+AJL35296.1 VS Unk_31	
+AAA18300.1 VS Unk_1842
+AEG34553.1 VS Unk_1970	
 
-(3)How many HSP have paralogs?
-A: 4 paralogs and 2 paralogs
-WP_103686269.1	Unk_1985	31.707	123	73	2	45	167	22	133	6.01e-17	70.1
-WP_103686269.1	Unk_1863	34.066	91	56	1	79	169	31	117	2.11e-14	62.8
-WP_103686269.1	Unk_1860	30.833	120	72	4	49	167	8	117	2.20e-14	62.8
-WP_103686269.1	Unk_1117	25.773	97	64	2	73	169	33	121	1.91e-08	47.0
-
-AAA18300.1	Unk_301	27.723	101	67	2	152	252	100	194	7.26e-05	41.2
-AAA18300.1	Unk_1187	26.946	167	106	6	175	338	172	325	1.30e-04	40.4
-
-Because they have the similar lengths and similar identities. 
-
-(4)Provide a justification for the presence of paralogs.
+For HSP have paralogs, I think only genes that match HSP(WP_103686269.1) has paralogs Unk_1985,Unk_1863 and Unk_1860.
+(However,since paralogs mean two duplicated genes from a same ancestor gene, here I found three genes that may be paralogs wich each other. So maybe one gene I select is not correct.
+But I couldn't figure out which two are better based on the data)
 
