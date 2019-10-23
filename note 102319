@@ -1,1 +1,29 @@
+1.COG: similar functions
+2.Enzyme comission Numbers: EC numbers: functions
+3.GO: gene ontologies : molecular function; celllular component; biological process;
+4.KEGG (which pathway; and which pathways are completed and which are lost) (consider draft genome[not finished yet, miss genes] and finished genome here)
 
+
+Useful Files
+T1.faa
+T1.gbk
+T1.tsv
+T1.tbl
+T1.gff
+
+Head T1.tsv
+(could be open in Excel)
+(contain EC number; COG)
+
+cp de_novo_assembly/T1_spades_output/contigs.fasta prokka_annotation
+
+
+ grep -c "COG" T1.tsv
+use cut to leave only COG column, and use grep to count the COG
+
+grep "COG" T1.tsv | cut -f6 | sort | uniq -c |sort -n
+
+
+
+use transcripts to validate gene calls
+use .gff file to search EC number
