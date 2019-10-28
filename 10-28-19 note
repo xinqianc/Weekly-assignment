@@ -1,0 +1,21 @@
+1.Genomics: Gene
+- Ref: Reference-Well-characterised (fasta),Raw reads:QA/QC
+- De novo: no reference; Raw reads:QA/QC-->Assembly--> Annotation: Classify, Identify--> Functional analysis
+
+
+2.Transcriptomes: Gene expression level
+1.relative abundance: (highly expressed or lowly expressed)
+2.splice variance:same gene could code for different trancripts and do different splicing (identify transcript isoforms of the same gene)
+3.different expressed under different conditions
+
+RNAseq, qPCR,Microarray (replicates)
+qPCR: can do absolute quantification
+Microarray: can do absolute quantification
+RNAseq: fold change: differntial abundant (statistical test: P-value); Visualization: Volcano plot, Venn Diagram
+
+For prokaryote:
+Find Oprons (different transcripts from the same transcript)
+
+
+Sequence depth: how many reads you get (the more reads I have, the confident for the quality of sequence)
+statistical Power:
