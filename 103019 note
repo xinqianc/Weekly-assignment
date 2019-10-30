@@ -1,1 +1,8 @@
 Pipelines for RNA seq
+
+
+Tophat Star: splice-aware aligner
+Bowtie2: doesn't realize splicing
+ 
+so Tophat, Star for Ref genome
+Bowtie2 for Ref RNA
