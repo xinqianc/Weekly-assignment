@@ -58,3 +58,5 @@ rsem-calculate-expression --bam --no-bam-output --paired-end --forward-prob 0 GM
 Gene ID
 (use command: cut, to find the column we want)
 cut -f 1,6 out.genes.results > TPM.txt (TPM is at the sevventh)
+
+use R
