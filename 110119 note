@@ -34,5 +34,18 @@ mkdir star
 STAR --runMode genomeGenerate --genomeDir star --genomeFastaFiles Homo_sapiens.GRCh38.dna.primary_assembly.fa --sjdbGTFfile Homo_sapiens.GRCh38.86.gtf
 (index our ref before mapping, let our ref more researchable)
 (sjdbgTFfile: add the annotation of the genome, we need to provide fasta, and gtf: to know where is the exon and intron)
-
+STAR --genomeDir star --readFilesCommand zcat --readFilesIn GM12878.1.R1.fastq.gz GM12878.1.R2.fastq.gz --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within --twopassMode Basic --outFilterMultimapNmax 1 --quantMode TranscriptomeSAM --outFileNamePrefix "GM12872.1"
+(if we have fastq, we dont need to zcat. but now is .gz; sort the mapping reads in order;outSAMunmapped Within: if you have reads do not map to anything, we just throw it; twopassMode Basic:want the best one; )
 (map the raw reads with Ref)
+(mapping will give us .bam file)
+(.bam ---> counts by rsem)
+our goal: rsem
+          counts
+gene 1      1
+G2         100
+G3        10000
+mkdir rsem
+rsem-prepare-reference --gtf Homo_sapiens.GRCh38.86.gtf Homo_sapiens.GRCh38.dna.primary_assembly.fa rsem/GRCh38
+(Ref's .gtf and .fa)
+rsem-calculate-expression --bam --no-bam-output --paired-end --forward-prob 0 GM12872.1Aligned.toTranscriptome.out.bam rsem/GRCh38 out >& rsem.log
+
