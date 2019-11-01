@@ -1,1 +1,23 @@
+RNA seq pipelines:
 
+
+(1)Raw reads (RNA) --> Genome or ---> Transcriptomes or --> no Ref, raw reads to transcriptptomes, and map raw reads to transcriptomes
+and then we get .sam/.bam file
+
+.sam file:
+------------------------------------------------
+ ---             ----               ----
+  ----               ----      ------ 
+ 
+ 
+ we want to determine differential gene expression:
+
+
+conda create -n RNASeq STAR rsem
+(STAR: splice-aware mapper; rsem: counting , output the number of counts)
+cd scratch/in_class_assignments
+mkdir RNASeq
+cd RNASeq
+wget https://www.encodeproject.org/files/ENCFF001RFH/@@download/ENCFF001RFH.fastq.gz -O GM12878.rep1.R1.fastq.gz
+wget https://www.encodeproject.org/files/ENCFF001RFG/@@download/ENCFF001RFG.fastq.gz -O GM12878.rep1.R2.fastq.gz 
+(read 1 and read 2 only for one replicate; we could use command: f loop to run multiple reads, because one replicate is not enough, we need to consider seq depth,so more replicates)
