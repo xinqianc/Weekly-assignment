@@ -48,4 +48,13 @@ mkdir rsem
 rsem-prepare-reference --gtf Homo_sapiens.GRCh38.86.gtf Homo_sapiens.GRCh38.dna.primary_assembly.fa rsem/GRCh38
 (Ref's .gtf and .fa)
 rsem-calculate-expression --bam --no-bam-output --paired-end --forward-prob 0 GM12872.1Aligned.toTranscriptome.out.bam rsem/GRCh38 out >& rsem.log
+(Ref's .gtp +.fa with .bam we generate by mapping)
+(create two files: out.gene.result/ out.isoform.result)
+(paired-end: FPKM, don't double count, some type of organism)
+(RPKM: same organism)
+(TPM: universial organism)
 
+
+Gene ID
+(use command: cut, to find the column we want)
+cut -f 1,6 out.genes.results > TPM.txt (TPM is at the sevventh)
