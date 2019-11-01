@@ -21,3 +21,18 @@ cd RNASeq
 wget https://www.encodeproject.org/files/ENCFF001RFH/@@download/ENCFF001RFH.fastq.gz -O GM12878.rep1.R1.fastq.gz
 wget https://www.encodeproject.org/files/ENCFF001RFG/@@download/ENCFF001RFG.fastq.gz -O GM12878.rep1.R2.fastq.gz 
 (read 1 and read 2 only for one replicate; we could use command: f loop to run multiple reads, because one replicate is not enough, we need to consider seq depth,so more replicates)
+wget http://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz
+gunzip Homo_sapiens.GRCh38.86.gtf.gz
+wget http://ftp.ensembl.org/pub/release-86/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+gunzip Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+(gtf: annotation)
+(we have Ref with fasta and gtf file)
+QA/QC --- fastqc
+trimming cutadapt
+conda activate RNASeq(give access to use star)
+mkdir star
+STAR --runMode genomeGenerate --genomeDir star --genomeFastaFiles Homo_sapiens.GRCh38.dna.primary_assembly.fa --sjdbGTFfile Homo_sapiens.GRCh38.86.gtf
+(index our ref before mapping, let our ref more researchable)
+(sjdbgTFfile: add the annotation of the genome, we need to provide fasta, and gtf: to know where is the exon and intron)
+
+(map the raw reads with Ref)
