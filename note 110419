@@ -7,3 +7,28 @@ RNA-seq:
 2. Count        OuTPUT: cOUNT TABLE
 
 3.Statistical Analysis           1.Differential expression analysis (sTATS)  2...        3....
+
+
+
+
+
+Introduction of R
+X<-3  (x=3)
+Y<-5  (y=5)
+
+"character" 1: numberic
+
+type of data
+vector:should be the same type: 1, "RNA" XXXX ; "1","RNA"  yes
+factor: store categorical data
+matrix: mutiple vectors
+dataframe"
+tibble:
+list:
+package: such as  tidyverse: move data
+install sth: two strategies
+1.install.packages("tidyverse"); 2.bioconductor: install.package("bioconductor"), bioconductor(install=)
+
+glengths <- c(4.6,3000,50000)
+species <- c("ecoli","human","corn")
+df<- data.frame(species,glengths)
