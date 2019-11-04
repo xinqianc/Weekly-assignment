@@ -1,0 +1,9 @@
+RNA-seq:
+
+1. Raw reads (cDNA)                           Ref genome ;                   Ref transcriptome ;       Ref: self-made reference
+                                             Splice-aware aligner
+                                              (sTAR)
+                                               SAM.BAM
+2. Count        OuTPUT: cOUNT TABLE
+
+3.Statistical Analysis           1.Differential expression analysis (sTATS)  2...        3....
