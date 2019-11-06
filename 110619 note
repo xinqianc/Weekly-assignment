@@ -26,3 +26,5 @@ now we use negative binomial distribution
 Workflow:
 NB negative binomial distribution --->  GCM generalize linear models ---> Wald test ---> p value and justifying P value for multiple comparisons
 ------------------------------------------------------------------------------------------------------------------------------
+
+library : let R know we want to have access to those packages
