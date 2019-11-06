@@ -18,3 +18,11 @@ find differential gene expression
 
 what is the best statistic to test?
 anova, P valuse, T test  ()
+
+
+sequencing data , not normal distributed, it is more like poisson distributed. you variance is equal to the mean
+now we use negative binomial distribution
+
+Workflow:
+NB negative binomial distribution --->  GCM generalize linear models ---> Wald test ---> p value and justifying P value for multiple comparisons
+------------------------------------------------------------------------------------------------------------------------------
