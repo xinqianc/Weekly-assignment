@@ -28,3 +28,6 @@ NB negative binomial distribution --->  GCM generalize linear models ---> Wald t
 ------------------------------------------------------------------------------------------------------------------------------
 
 library : let R know we want to have access to those packages
+
+import data into R
+mycounts <- read.csv("BL5300-DEG/airway_scaledcounts.csv") 
