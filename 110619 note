@@ -1,0 +1,20 @@
+install:
+
+Bioconductor is specialized repository of packages related to bioinformatics.
+
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+BiocManager::install()
+
+install.packages(“readr”)  :
+install.packages(“tidyverse”)
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") 
+BiocManager::install("DESeq2")
+
+------------------------------------------------------------------------------------------------------------------------------
+find differential gene expression
+- statistical difference
+- fold change
+
+
+what is the best statistic to test?
+anova, P valuse, T test  ()
