@@ -1,0 +1,16 @@
+convert table to dataframe
+mycounts <- as.data.frame(mycounts)
+
+dex : control and treatment
+
+contrast : compare sample to control
+
+
+tidyverse language: PPT
+mutate: do some calculation
+arrange(dataset,column)
+
+
+count table --> DEC object --> DESEQ --> information
+
+arrage, put out the most important one, and then use plotcounts to count gene expression
