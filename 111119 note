@@ -79,4 +79,12 @@ ggplot(res)+
  principal component analysis, PCA
  samples with similar expression profiles will get together   (in two-dimension)
  
+ before PCA:log transform our data to a more comparatable to high and low expressed genes
+ (don't let higher gene expression pull our data over the PCA, let it be away from other data)
  
+rld=rlog(dds)
+plotPCA(rld, intgroup ="dex")
+ 
+ 
+ ----------------------------------------------------
+ Ref, raw reads --> .sam/.bam --> .sam + .gtf ==> count table --> play with R
