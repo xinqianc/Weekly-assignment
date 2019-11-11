@@ -1,1 +1,77 @@
+ggplot:
 
+
+mycounts <- read.csv("BL5300-DEG/airway_scaledcounts.csv") 
+metadata <- read.csv("BL5300-DEG/airway_metadata.csv")
+anno <- read.csv("BL5300-DEG/annotables_grch38.csv")
+head(mycounts)
+class(mycounts)
+names(mycounts)[-1]
+metadata$id
+names(mycounts)[-1]==metadata$id
+all(names(mycounts)[-1]==metadata$id)
+install.packages("tidyverse")
+install.packages("backports")
+library(readr)
+library(tidyverse)
+library(DESeq2)
+install.packages("survival")
+library(DESeq2)
+install.packages("cluster")
+library(DESeq2)
+install.packages("foreign")
+library(DESeq2)
+install.packages("data.table")
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") 
+BiocManager::install("DESeq2")
+library(DESeq2)
+setwd("~/BL5300-DEG/")
+mycounts <- read.csv("BL5300-DEG/airway_scaledcounts.csv")
+mycounts <- as.data.frame(mycounts)
+metadata <- as.data.frame(metadata)
+class(mycounts)
+dds.data <- DESeqDataSetFromMatrix(countData=mycounts, 
+                                   colData=metadata, 
+                                   design=~dex, 
+                                   tidy=TRUE)
+dds.data
+dds <- DESeq(dds.data)
+res <- results(dds, contrast=c("dex","control","treated"), tidy=TRUE)
+res <- tbl_df(res)
+res
+res2 <- arrange(res, padj)
+control <- filter(res, padj<=0.05 & log2FoldChange>=2)
+treatment <- filter(res, padj<=0.05 & log2FoldChange<=-2)
+plotCounts(dds,gene="ENSG00000000003",intgroup="dex")
+
+--------------
+
+ggplot2:
+
+res=mutate(res, significance = ifelse(padj<=0.05,"Significant","Non-significiant")) 
+create a column for signification
+
+ggplot(res)+
+ geom_point(aes(x=log2FoldChange, y=padj))
+ geom_point(aes(x=log2FoldChange, y=padj,color=significance))
+ geom_line(aes(x=log2FoldChange, y=padj,color=significance))
+  geom_point(aes(x=log2FoldChange, y=padj,color=significance))+
+  scale_color_manual(value=c("red","blue"))
+  
+ vocalno plot:
+ggplot(res)+
+  geom_point(aes(x=log2FoldChange, y=-log10(padj),color=significance))
+  
+ box plot: DEC: plotcounts, in DEC package
+ res: differential genes
+ dds as our dataset
+ 
+ plotCounts(dds,gene = "ENSG00000152583",intgroup = "dex")   "control and treatment information in the dex data" "ENS..." is the gene that is highest differential expressed
+ 
+ plotCounts(dds,gene = "ENSG00000152583",intgroup = "dex", returnData = TRUE) %>%                         (use counts)
+  ggplot(aes(x=dex,y=count))+
+  geom_boxplot()+
+  geom_point()
+ (have the boxplot and point as well)
+  
+ 
