@@ -75,3 +75,8 @@ ggplot(res)+
  (have the boxplot and point as well)
   
  
+ 
+ principal component analysis, PCA
+ samples with similar expression profiles will get together   (in two-dimension)
+ 
+ 
