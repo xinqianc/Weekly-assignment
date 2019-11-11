@@ -87,4 +87,5 @@ plotPCA(rld, intgroup ="dex")
  
  
  ----------------------------------------------------
+ Transcriptomes:
  Ref, raw reads --> .sam/.bam --> .sam + .gtf ==> count table --> play with R
