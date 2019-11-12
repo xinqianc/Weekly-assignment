@@ -1,0 +1,33 @@
+library(readr)
+library(tidyverse)
+rm(dds)
+library(DESeq2)
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") 
+BiocManager::install("DESeq2")
+library(DESeq2)
+install.packages("survival")
+library(DESeq2)
+
+(I have trouble with DESeq2, the commands above are how I activate my DESeq2 package)
+---------------------------------------------------------------------------------------------------
+R studio:
+
+mycounts <- read.csv("BL5300-DEG/WA_counts.csv")                          --- input my countable with counts and gene id, use mycounts package to manipulate my data
+metadata <- read.csv("BL5300-DEG/WA8_Metadata.csv")                       --- input my samples and its treatment (which samples, which treatment: control, mutant,treated..), use metadata package to manipulate my data
+mycounts <- as.data.frame(mycounts)                                       --- change mycounts's  property to data.frame, a data format for us to use DESeq (To use DESeqDataSetFromMatrix, the user should provide the counts matrix, the information about the samples (the columns of the count matrix) as a DataFrame or data.frame)
+metadata <- as.data.frame(metadata)                                       --- change metadata's property to data.frame, a data format for us to use DESeq
+names(mycounts)[-1]
+metadata$ï..id
+all(names(mycounts)[-1]==metadata$ï..id)                                  --- to test if samples match in mycounts and metadata
+dds.data <- DESeqDataSetFromMatrix(countData=mycounts,                    ---
+                                   colData=metadata, 
+                                   design=~dex, 
+                                   tidy=TRUE)
+dds.data
+dds <- DESeq(dds.data)
+res <- results(dds, contrast=c("dex","Control","Mutant"), tidy=TRUE)
+res <- tbl_df(res)
+res
+res2 <- arrange(res,padj)
+res3 <- filter(res2,padj<=0.05 & log2FoldChange>=2)
+res4 <- filter(res2,padj<=0.05 & log2FoldChange<=-2)
