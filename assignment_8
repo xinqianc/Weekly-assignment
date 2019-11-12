@@ -19,12 +19,12 @@ metadata <- as.data.frame(metadata)                                       --- ch
 names(mycounts)[-1]
 metadata$ï..id
 all(names(mycounts)[-1]==metadata$ï..id)                                  --- to test if samples match in mycounts and metadata
-dds.data <- DESeqDataSetFromMatrix(countData=mycounts,                    ---
+dds.data <- DESeqDataSetFromMatrix(countData=mycounts,                    ---colData is a table that contains the information on each sample needed to decide which sample has which condition
                                    colData=metadata, 
                                    design=~dex, 
-                                   tidy=TRUE)
+                                   tidy=TRUE)                             --- make sure the format is correct
 dds.data
-dds <- DESeq(dds.data)
+dds <- DESeq(dds.data)                                                    --- output dds.data to dds
 res <- results(dds, contrast=c("dex","Control","Mutant"), tidy=TRUE)
 res <- tbl_df(res)
 res
