@@ -31,3 +31,17 @@ res
 res2 <- arrange(res,padj)
 res3 <- filter(res2,padj<=0.05 & log2FoldChange>=2)
 res4 <- filter(res2,padj<=0.05 & log2FoldChange<=-2)
+
+-------------------------------------------------------------------------------------------------------------
+How many genes are significantly differentially expressed?
+How many genes are significantly differentially expressed in the Control versus the Mutant?
+How many genes are significantly differentially expressed in the Mutant versus the Control?
+What gene is the most highly expressed gene in the Mutant versus the Control?
+What gene is the most highly expressed gene in the Control versus the Mutant?
+
+
+1.There are 2404 genes expressed differentially. (padj<=0.05, log2foldchange>=2 or <=2)
+2. 915 genes (padj<=0.05,log2foldchange>=2)
+3. 1489 genes(padj<=0.05,log2foldchange<=-2
+4. Solyc11g028040.1.1
+5. Solyc09g089500.2.1
