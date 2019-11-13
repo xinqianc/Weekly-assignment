@@ -1,1 +1,13 @@
 metagenomics:
+
+
+GC content: each organism==> one peak; multiple peaks --> >2 organisms
+
+chanllenges: assemble problem: we don't know how many contigs we are expected
+spades: cut and create k-mers to do assembly
+
+original: rRNA-->cDNA--> ligation-->..
+now: cDNA--> PCR--> seq
+
+
+fastq (rRNA) --> operational taxonomix unit
