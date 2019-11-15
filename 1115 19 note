@@ -1,0 +1,50 @@
+METAGENEMICS
+
+
+shot gun: whole genome
+marker gene matagenomics : 16S-rRNA: tell taxonomy
+
+
+
+
+           Sample1    Sample2
+-----------------------------------------------
+species1
+species2
+
+
+identify organism: extrinsic(blast), intrinsic(look at gene patterns)
+
+16S-rRNA: 98%,99% same with a confirmed species ?? which hard line we need to use?
+
+raw reads --> QA/QC --> learn errors ---> correct errors -->ASVs --> bins ---> assemble --> remove chemeras --> count table
+
+
+           Sample1    Sample2
+-----------------------------------------------
+ASV1
+ASV2
+-----------------------------------------------
+
+
+assembly way:
+
+single molecule
+read2---------------------------
+           ------------------------------- read2
+           only have 50bp around identity could be assembely to a single molecule
+           
+ 
+ PCR error:
+from species 1---------++++++++++++++  from species 2
+ (if it doesn't match the dataset, we don't know about them , we just throw them)
+ 
+ 
+ out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(240,160),
+              maxN=0, maxEE=c(2,2), truncQ=2, rm.phix=TRUE,
+              compress=TRUE) # On Windows set multithread=FALSE
+              
+truncLen could be replaced by slidingwindow.
+
+OTU,98% identity
+ASV:
