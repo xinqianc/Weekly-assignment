@@ -18,7 +18,8 @@ identify organism: extrinsic(blast), intrinsic(look at gene patterns)
 16S-rRNA: 98%,99% same with a confirmed species ?? which hard line we need to use?
 
 raw reads --> QA/QC --> learn errors ---> correct errors -->ASVs --> bins ---> assemble --> remove chemeras --> count table
-
+In metagenomics, binning is the process of grouping reads or contigs and assigning them to operational taxonomic units(OTU).
+Binning methods can be based on either compositional features or alignment (similarity), or both.
 
            Sample1    Sample2
 -----------------------------------------------
