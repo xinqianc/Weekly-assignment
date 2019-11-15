@@ -20,6 +20,10 @@ identify organism: extrinsic(blast), intrinsic(look at gene patterns)
 raw reads --> QA/QC --> learn errors ---> correct errors -->ASVs --> bins ---> assemble --> remove chemeras --> count table
 In metagenomics, binning is the process of grouping reads or contigs and assigning them to operational taxonomic units(OTU).
 Binning methods can be based on either compositional features or alignment (similarity), or both.
+first we use bin to group the read1 and read2 that we think is different. so we have group 1 .group2. group3/
+And then we do assembly in different groups
+chemeras is something we generate in the PCR error, just means mix of different DNA sequences from two sequences
+----------+++++++++
 
            Sample1    Sample2
 -----------------------------------------------
