@@ -1,0 +1,20 @@
+library(readr)
+library(DESeq2)                  
+library(tidyverse)
+mycounts <- read.csv("Desktop/WA_counts.csv")
+metadata <- read.csv("Desktop/WA8_Metadata 2.csv") 
+mycounts <- as.data.frame(mycounts)  
+metadata <- as.data.frame(metadata)
+all(names(mycounts)[-1]==metadata$id)
+dds.data <- DESeqDataSetFromMatrix(countData=mycounts,
+                                   colData=metadata,
+                                   design=~dex,
+                                   tidy=TRUE)
+dds.data
+dds <- DESeq(dds.data)  
+res <- results(dds, contrast=c("dex","Control","Mutant"), tidy=TRUE)
+res <- tbl_df(res)
+res
+res2 <- arrange(res,padj)
+res3 <- filter(res2,padj<=0.05 & log2FoldChange>=2)
+res4 <- filter(res2,padj<=0.05 & log2FoldChange<=-2)
