@@ -77,5 +77,15 @@ merge (did alignment R1 and R2)
  now we have bin and quality table, and then we need to put names of it , we want to add another column of sequence table to add taxonomy
 ===============
 silva-species data provide the name  to our unknown data
+==============
+give taxonomy to each species.
+============
+count the radio of ddifferent species to find meaningful results.
 
-  
+
+
+
+PCA: the idea of pca is borrowed from ecology "study the clusters of species."
+alpha diversity: richness "number of species"
+beta diversity: the link of pathology and bacteria . bacteria about obesity group together, control group together
+taxonomic diversity: 
