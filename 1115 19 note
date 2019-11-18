@@ -9,8 +9,8 @@ marker gene matagenomics : 16S-rRNA: tell taxonomy
 
            Sample1    Sample2
 -----------------------------------------------
-species1
-species2
+species1(OTU
+species2(OTU
 
 
 identify organism: extrinsic(blast), intrinsic(look at gene patterns)
@@ -53,3 +53,29 @@ truncLen could be replaced by slidingwindow.
 
 OTU,98% identity
 ASV:
+
+
+
+
+fnfs: forward reads
+fnrs :reverse reads, just names
+"——“ find underline,   find the first ","  ==> ,1
+we just to see several qulities to assume the whole quality of whole read 1 and read2 
+C2A--> C IS CONVERTED TO A, correct the errors
+
+R1        R2
+QA/QC    QA/QC
+ERROR    ERROR
+ASV      ASV
+==============
+merge (did alignment R1 and R2)
+===============
+  ASV= full length
+  construct sequence table
+  remove chimeras
+==============
+ now we have bin and quality table, and then we need to put names of it , we want to add another column of sequence table to add taxonomy
+===============
+silva-species data provide the name  to our unknown data
+
+  
