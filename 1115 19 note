@@ -89,3 +89,14 @@ PCA: the idea of pca is borrowed from ecology "study the clusters of species."
 alpha diversity: richness "number of species"
 beta diversity: the link of pathology and bacteria . bacteria about obesity group together, control group together
 taxonomic diversity: 
+
+
+DO=Day O
+F=female
+3=subject number
+
+seqtab   to phyloseq
+
+creare a list by phyloseq, list could contain vectoe, matrix,dataframe....could use this list to do a lot of diversity analysis
+
+
