@@ -21,11 +21,12 @@ res3 <- filter(res2,padj<=0.05 & log2FoldChange>=2)
 res4 <- filter(res2,padj<=0.05 & log2FoldChange<=-2)
 
 ggplot
+1.
 res=mutate(res,significance=ifelse(padj<0.05,"Significant","Non-significant"))  --- add a column indicating significance
 ggplot(res) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), colour=significance)) +
   scale_color_manual(values = c("Significant" = "red", "Non-Significant" = "blue"))+      ---- change color manually
-  ggtitle("Mov10 overexpression") +
+  ggtitle("Differentially expressed genes") +
   xlab("log2 fold change") + 
   ylab("-log10 adjusted p-value") +
   #scale_y_continuous(limits = c(0,50)) +
@@ -33,12 +34,28 @@ ggplot(res) +
         plot.title = element_text(size = rel(1.5), hjust = 0.5),
         axis.title = element_text(size = rel(1.25)))  +
   theme_bw()
+  
+2. highest positive fold change
+ plotCounts(dds,gene = "Solyc11g028040.1.1",intgroup = "dex")
+ 
+3. highest negative fold change
+plotCounts(dds,gene = "Solyc09g089500.2.1",intgroup = "dex")
+
+4. The plot visualizes the differences between measurements taken in two samples, 
+by transforming the data onto M (log ratio) and A (mean average) scales, then plotting these values
+ When called with a data.frame, plotMA expects the data frame to have 3 columns,
+ two numeric ones for mean and log fold change, and a logical one for significance. !!!!!
+
+  
+df <- data.frame(res$baseMean,res$log2FoldChange,res$padj<=0.05)               ----- generate three columns
+plotMA(df,main="MA plot",log="x",xlab="log10 baseMean", ylab="log2FoldChange",   ---- x axis should be log
+       colNonSig = "black", colSig = "red")
 
 -------------------------------------------------------------------------------------------------------------------------
 Use the data generated from Weekly Assignment 8 to construct the following plots.
 
-A volcano plot showing differentially expressed genes - color the Control points blue and the Mutant points Red.
-A box plot of the expression of the gene with the highest positive fold change
-A box plot of the expression of the gene with the highest negative fold change
-An MA. MA plots are log10 of the mean expression (baseMean) of a gene on the x-axis and log2FoldChange on the y-axis.
+1.A volcano plot showing differentially expressed genes - color the Control points blue and the Mutant points Red.
+2.A box plot of the expression of the gene with the highest positive fold change
+3.A box plot of the expression of the gene with the highest negative fold change
+4.An MA. MA plots are log10 of the mean expression (baseMean) of a gene on the x-axis and log2FoldChange on the y-axis.
 Copy your plots to a word document and upload the word document along with a link to the github page with your code.
