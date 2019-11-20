@@ -1,0 +1,23 @@
+Metagenomics- 
+16S marker: do not have funational information
+shotgun : will give us funtional information  : low abundance organisms and high abundance organisms: need to think about how to sequence low abundance one as well (may be hidden)
+function: shotgun: discover the information, find how to grow them in petri dish
+
+
+relative abundance:
+ratio of A to B
+
+A:counts /sample
+--------------------
+B:total seq of samples
+
+
+  GENE1 2  3    4   5   16srna (MARKER)
+---O----O-O-----O---O----O----   Organism 1
+use marker gene --> find gene 1--- > function
+
+
+GC content is unique to organism
+
+physical : PCR to amplify genes that I am interested in ; single cell sequence
+computational :binq sequence: 1. use marker gene 2. use similar GC content 3. tetranucleotide frequency 4.differential coverage: you should sequence the same organism equally: have same coverage
